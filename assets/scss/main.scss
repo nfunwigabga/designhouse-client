@@ -1,0 +1,33 @@
+/* Google Web Fonts */
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,300,300i,400,600,600i,700&display=swap");
+@import "imports/style";
+
+
+/***** CUSTOM CSS **********/
+.post-overlay {
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    height: 100%;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
+    opacity: 0;
+}
+
+.post-overlay:hover {
+    opacity: 1;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.h-48 {
+    height: 12rem;
+}
+
+.bg-cover {
+    height: 12rem;
+    background-size: cover;
+    background-position: center;
+}
