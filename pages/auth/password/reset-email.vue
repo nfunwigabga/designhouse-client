@@ -2,15 +2,10 @@
   <section class="authentication">
     <div class="auth-body">
       <h1 class="text-uppercase fw-500 mb-4 text-center font-22">
-        Resend Verification Email
+        Reset Password
       </h1>
       <form class="auth-form" @submit.prevent="submit">
-        <alert-error v-if="form.errors.has('message')" :form="form">
-          {{ form.errors.get('message') }}
-        </alert-error>
-        <alert-success :form="form">
-          We have resent the verification email
-        </alert-success>
+        <alert-success :form="form">{{ status }}</alert-success>
         <div class="form-group">
           <base-input
             :form="form"
@@ -22,9 +17,14 @@
 
         <div class="text-right">
           <base-button :loading="form.busy">
-            Resend
+            Send Reset Link
           </base-button>
         </div>
+        <p class="font-14 fw-400 text-center mt-4">
+          <nuxt-link :to="{ name: 'login' }" class="color-blue">
+            Back to login
+          </nuxt-link>
+        </p>
       </form>
     </div>
   </section>
@@ -35,6 +35,7 @@ export default {
   middleware: ['guest'],
   data() {
     return {
+      status: '',
       form: this.$vform({
         email: ''
       })
@@ -44,9 +45,14 @@ export default {
   methods: {
     submit() {
       this.form
-        .post(`/verification/resend`)
-        .then(res => this.form.reset())
-        .catch(e => console.log(e));
+        .post('/password/email')
+        .then(res => {
+          this.status = res.data.status;
+          this.form.reset();
+        })
+        .catch(e => {
+          console.log(e);
+        });
     }
   }
 };

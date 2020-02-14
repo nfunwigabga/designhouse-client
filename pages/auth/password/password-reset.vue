@@ -2,68 +2,50 @@
   <section class="authentication">
     <div class="auth-body">
       <h1 class="text-uppercase fw-500 mb-4 text-center font-22">
-        Register
+        Reset Password
       </h1>
       <form class="auth-form" @submit.prevent="submit">
         <alert-success :form="form">
-          We have sent you an email to activate your account.
+          {{ status }}
+          <p>
+            <nuxt-link to="/login">Proceed to login</nuxt-link>
+          </p>
         </alert-success>
         <div class="form-group">
           <base-input
             :form="form"
-            field="name"
-            v-model.trim="form.email"
-            placeholder="Full Name"
-          ></base-input>
-        </div>
-        <div class="form-group">
-          <base-input
-            :form="form"
-            inputType="text"
-            field="username"
-            v-model.trim="form.username"
-            placeholder="Username"
-          ></base-input>
-        </div>
-        <div class="form-group">
-          <base-input
-            :form="form"
-            inputType="email"
+            :readonly="true"
             field="email"
-            v-model.trim="form.email"
+            v-model="form.email"
             placeholder="Email"
           ></base-input>
         </div>
+
         <div class="form-group">
           <base-input
             :form="form"
             inputType="password"
             field="password"
-            v-model.trim="form.password"
-            placeholder="Password"
+            v-model="form.email"
+            placeholder="New Password"
           ></base-input>
         </div>
+
         <div class="form-group">
           <base-input
             :form="form"
             inputType="password"
             field="password_confirmation"
-            v-model.trim="form.password_confirmation"
-            placeholder="Confirm Password"
+            v-model="form.password_confirmation"
+            placeholder="Confirm New Password"
           ></base-input>
         </div>
 
         <div class="text-right">
           <base-button :loading="form.busy">
-            Register
+            Reset Password
           </base-button>
         </div>
-        <p class="font-14 fw-400 text-center mt-4">
-          Already have an account?
-          <nuxt-link :to="{ name: 'login' }" class="color-blue">
-            Login
-          </nuxt-link>
-        </p>
       </form>
     </div>
   </section>
@@ -74,12 +56,12 @@ export default {
   middleware: ['guest'],
   data() {
     return {
+      status: '',
       form: this.$vform({
-        username: '',
-        name: '',
         email: '',
         password: '',
-        password_confirmation: ''
+        password_confirmation: '',
+        token: ''
       })
     };
   },
@@ -87,14 +69,20 @@ export default {
   methods: {
     submit() {
       this.form
-        .post(`/register`)
+        .post('/password/reset')
         .then(res => {
+          this.status = res.data.status;
           this.form.reset();
         })
-        .catch(error => {
-          console.log(error);
+        .catch(e => {
+          console.log(e);
         });
     }
+  },
+
+  created() {
+    this.form.email = this.$route.query.email;
+    this.form.token = this.$route.params.token;
   }
 };
 </script>

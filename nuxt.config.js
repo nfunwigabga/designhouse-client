@@ -31,25 +31,14 @@ export default {
       }
     ]
   },
-  /*
-   ** Customize the progress-bar color
-   */
+
   loading: { color: '#fff' },
-  /*
-   ** Global CSS
-   */
   css: ['@/assets/scss/main.scss'],
-  /*
-   ** Plugins to load before mounting the App
-   */
-  plugins: ['~plugins/vform'],
-  /*
-   ** Nuxt.js dev-modules
-   */
+
+  plugins: ['~plugins/vform', '~components/_global'],
+
   buildModules: ['@nuxtjs/router'],
-  /*
-   ** Nuxt.js modules
-   */
+
   modules: [
     'bootstrap-vue/nuxt',
     '@nuxtjs/auth',
