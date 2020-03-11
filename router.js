@@ -54,8 +54,24 @@ const routes = [
         path: 'profile',
         name: 'settings.profile',
         component: page('user/settings/profile.vue')
+      },
+      {
+        path: 'designs',
+        name: 'settings.designs',
+        component: page('user/settings/designs.vue')
       }
     ]
+  },
+
+  {
+    path: '/designs',
+    name: 'designs.search',
+    component: page('designs/search.vue')
+  },
+  {
+    path: '/design/:slug',
+    name: 'designs.show',
+    component: page('designs/show.vue')
   }
 ];
 

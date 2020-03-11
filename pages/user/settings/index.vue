@@ -11,7 +11,7 @@
               :to="{ name: link.route }"
               class="list-group-item list-group-item-action"
             >
-              Update Profile
+              {{ link.title }}
             </nuxt-link>
           </div>
         </div>
@@ -29,11 +29,13 @@
 
 <script>
 export default {
+  middleware: ['auth'],
   data() {
     return {
       links: [
         { title: 'Dashboard', route: 'settings.dashboard' },
-        { title: 'Update Profile', route: 'settings.profile' }
+        { title: 'Update Profile', route: 'settings.profile' },
+        { title: 'Designs', route: 'settings.designs' }
       ]
     };
   }

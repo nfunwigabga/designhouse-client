@@ -35,7 +35,11 @@ export default {
   loading: { color: '#fff' },
   css: ['@/assets/scss/main.scss'],
 
-  plugins: ['~plugins/vform', '~components/_global'],
+  plugins: [
+    '~plugins/vform',
+    '~components/_global',
+    { src: '~/plugins/gmaps', ssr: false }
+  ],
 
   buildModules: ['@nuxtjs/router'],
 

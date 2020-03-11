@@ -21,7 +21,8 @@
     "node-sass": "^4.13.1",
     "nuxt": "^2.0.0",
     "sass-loader": "^8.0.2",
-    "vform": "^1.0.1"
+    "vform": "^1.0.1",
+    "vue2-google-maps-withscopedautocomp": "^0.12.1"
   },
   "devDependencies": {
     "eslint-config-prettier": "^4.1.0",
