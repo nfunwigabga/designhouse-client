@@ -74,6 +74,11 @@ export default {
      */
     extend(config, ctx) { },
 
-    html: { minify: { collapseWhitespace: true } }
+    html: {
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true
+      }
+    }
   }
 };
