@@ -51,18 +51,18 @@
                     v-model="filters.q"
                     placeholder="Search..."
                   />
-                  <!-- <div class="input-group-append">
+                  <div class="input-group-append">
                     <button
                       :disabled="searching"
                       class="btn rounded primary-bg-color text-white"
                       type="submit"
                     >
-                      <span v-if="searching">
+                      <!-- <span v-if="searching">
                         <i class="fas fa-spinner fa-spin"></i>
-                      </span>
+                      </span>-->
                       Search
                     </button>
-                  </div>-->
+                  </div>
                 </div>
               </div>
             </div>
