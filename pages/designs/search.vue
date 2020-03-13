@@ -57,9 +57,9 @@
                       class="btn rounded primary-bg-color text-white"
                       type="submit"
                     >
-                      <!-- <span v-if="searching">
+                      <span v-show="searching">
                         <i class="fas fa-spinner fa-spin"></i>
-                      </span>-->
+                      </span>
                       Search
                     </button>
                   </div>
