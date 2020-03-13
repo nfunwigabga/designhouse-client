@@ -44,7 +44,7 @@
                 <label class="custom-control-label" for="hasTeam">By Team</label>
               </div>
 
-              <div>
+              <!-- <div>
                 <div class="input-group mb-0">
                   <input
                     type="text"
@@ -65,7 +65,7 @@
                     </button>
                   </div>
                 </div>
-              </div>
+              </div>-->
             </div>
           </div>
         </form>
