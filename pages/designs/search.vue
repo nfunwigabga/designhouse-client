@@ -3,7 +3,6 @@
     <!-- Start Filters -->
     <section class="filters-block shadow-sm">
       <div class="container">
-        <!--
         <form @submit.prevent="search">
           <div class="filters d-flex justify-content-between align-items-center">
             <ul class="filters-dropdown">
@@ -19,7 +18,7 @@
                 </select>
               </li>
             </ul>
-
+            <!--
             <div class="d-flex align-items-center">
               <div class="custom-control mr-3 custom-checkbox">
                 <input
@@ -68,9 +67,9 @@
                 </div>
               </div>
             </div>
+            -->
           </div>
         </form>
-        -->
       </div>
     </section>
     <!-- End Filters -->
