@@ -28,7 +28,7 @@
                   true-value="1"
                   false-value="0"
                   v-model="filters.has_comments"
-                >
+                />
                 <label class="custom-control-label" for="hasComments">Has Comments</label>
               </div>
 
@@ -40,7 +40,7 @@
                   true-value="1"
                   false-value="0"
                   v-model="filters.has_team"
-                >
+                />
                 <label class="custom-control-label" for="hasTeam">By Team</label>
               </div>
 
@@ -51,7 +51,7 @@
                     class="form-control"
                     v-model="filters.q"
                     placeholder="Search..."
-                  >
+                  />
                   <div class="input-group-append">
                     <button
                       :disabled="searching"
