@@ -31,7 +31,7 @@
                 />
                 <label class="custom-control-label" for="hasComments">Has Comments</label>
               </div>
-              <!--
+
               <div class="custom-control custom-checkbox mr-3">
                 <input
                   type="checkbox"
@@ -66,7 +66,6 @@
                   </div>
                 </div>
               </div>
-              -->
             </div>
           </div>
         </form>
