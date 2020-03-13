@@ -3,6 +3,7 @@
     <!-- Start Filters -->
     <section class="filters-block shadow-sm">
       <div class="container">
+        <!--
         <form @submit.prevent="search">
           <div class="filters d-flex justify-content-between align-items-center">
             <ul class="filters-dropdown">
@@ -69,6 +70,7 @@
             </div>
           </div>
         </form>
+        -->
       </div>
     </section>
     <!-- End Filters -->
