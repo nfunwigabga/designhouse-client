@@ -44,15 +44,9 @@
                 <label class="custom-control-label" for="hasTeam">By Team</label>
               </div>
 
-              <!-- <div>
-                <div class="input-group mb-0">
-                  <input
-                    type="text"
-                    class="form-control"
-                    v-model="filters.q"
-                    placeholder="Search..."
-                  />
-                  <div class="input-group-append">
+              <div class="input-group mb-0">
+                <input type="text" class="form-control" v-model="filters.q" placeholder="Search..." />
+                <!-- <div class="input-group-append">
                     <button
                       :disabled="searching"
                       class="btn rounded primary-bg-color text-white"
@@ -63,9 +57,8 @@
                       </span>
                       Search
                     </button>
-                  </div>
-                </div>
-              </div>-->
+                </div>-->
+              </div>
             </div>
           </div>
         </form>
